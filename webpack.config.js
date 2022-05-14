@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 var ImageminPlugin = require('imagemin-webpack-plugin').default
+const webpack = require('webpack');
 
 module.exports = {
     entry: ['./src/app.js', './src/app.scss'],
@@ -18,6 +19,11 @@ module.exports = {
         watchContentBase: true,
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+          }),
         new MiniCssExtractPlugin({
             filename: 'bundle.css'
         }),

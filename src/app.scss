@@ -1,4 +1,5 @@
 @import 'public/font/stylesheet.css';
+@import 'owl.carousel/dist/assets/owl.carousel.css';
 body{
     background-color: black;
     font-family: 'TT Norms Pro';
@@ -529,5 +530,139 @@ position: relative;
         color: #FFFFFF;
         margin-bottom: 70px;
 
+    }
+    .slide{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 300px;
+        color: #fff;
+        padding: 30px;
+        border-radius: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+.title-item{
+    font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+/* or 130% */
+
+text-align: center;
+
+/* 1 */
+
+color: #FFFFFF;
+margin-bottom: 14px;
+}
+.subtitle-item{
+    font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+// width: 100%;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+/* 1 */
+
+color: #FFFFFF;
+}
+a{
+    font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+
+text-align: center;
+text-decoration: underline;
+color: #FFD900;
+}
+.owl-carousel{
+    // padding-left: 45px;
+    // padding-right: 45px;
+}
+.owl-nav{
+    
+.prev-slide{
+    position: absolute;
+    top: calc(50%);
+    left: -40px;
+}
+.next-slide{
+    position: absolute;
+    top: calc(50%);
+    right: -40px;
+}
+}
+}
+
+.example{
+    .title{
+        font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 60px;
+/* or 125% */
+
+text-align: center;
+
+/* 1 */
+
+color: #FFFFFF;
+margin-bottom: 80px;
+    }
+
+    .example-block{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+    .example-img{
+        width: calc(50% - 15px);
+        background-image: url(public/products/example_bg.png);
+        background-position:100% 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .example-table{
+        width: calc(50% - 15px);
+    }
+    .table{
+        display: flex;
+        flex-direction: column;
+        .table-row{
+            display: flex;
+            align-items: center;
+            &:first-child{
+                background: #FFD900;
+border-radius: 10px 10px 0px 0px;
+color: #1F1F1F;
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 134.7%;
+padding: 13px 35px;
+            }
+
+
+            div{
+                display: flex;
+                align-items: center;
+            }
+        }
     }
 }
