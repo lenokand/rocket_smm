@@ -282,6 +282,7 @@ menu {
     padding: 30px 0;
     border-radius: 14px;
     background: linear-gradient(97.48deg, #FFF099 0%, #FFE659 12.07%, #FFD900 54.4%);
+    
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -294,7 +295,9 @@ menu {
 
     &:hover {
         // background: linear-gradient(97.48deg, #FFF099 0%, #FFE659 50.07%, #FFD900 100%);
-        color: #121212c8;
+        color: #1F1F1F;
+        opacity: 0.7;
+        
         // font-weight: 500;
     }
 }
@@ -1096,7 +1099,9 @@ color: #797979;
     }
     .plan-block_item{
         display: flex;
-        align-items: center;
+        // align-items: center;
+        align-items: flex-start;
+
         margin-bottom: 90px;
     }
     .wrapper{
@@ -1150,6 +1155,18 @@ font-weight: 700;
         }
     }
     .content{
+        // display: none;
+        transition: 300ms ease;
+        position: absolute;
+        top: -100%;
+        opacity: 0;
+
+        &.show{
+            // display: block;
+            position: static;
+            opacity: 1;
+
+        }
         ol, ul{
             li{
                 margin-bottom: 8px;
@@ -1206,6 +1223,11 @@ line-height: 34px;
 color: #FFFFFF;
             width: 60%;
         }
+    }
+
+    .more{
+        color: #FFD900;
+        cursor: pointer;
     }
 }
 

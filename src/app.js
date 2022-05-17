@@ -98,3 +98,17 @@ if(document.querySelector('[href="#modal-call"]')){
     });
     
   }
+
+
+
+  let morebtns = document.querySelectorAll('.more')
+
+  morebtns.forEach((morebtn) =>{
+
+    morebtn.addEventListener('click', function(){
+     console.log(  morebtn.parentNode.querySelector('.content').classList.toggle('show'))
+   
+    })
+  })
+  
+ 
