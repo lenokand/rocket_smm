@@ -67,6 +67,7 @@ $(document).ready(function(){
 
         {
             margin:30,
+            autoHeight: true,
    nav:true,
 
    navText:[`<div class='nav-btn prev-slide'><svg width="33" height="18" viewBox="0 0 33 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,6 +90,43 @@ $(document).ready(function(){
         }
     );
   });
+  window.addEventListener("resize", resizeListener);
+  function resizeListener(){
+    if(window.innerWidth <= 915 ){
+      console.log(window.innerWidth) 
+
+      $('.category-block').addClass('owl-carousel owl-theme')
+
+      $(document).ready(function(){
+        $('.category-block').owlCarousel(
+    
+            {
+                margin:30,
+       nav:true,
+    
+       navText:[`<div class='nav-btn prev-slide'><svg width="33" height="18" viewBox="0 0 33 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <path d="M8.99997 0L10.4617 1.46177L3.95712 7.96639H32.8154V10.0337H3.95712L10.4617 16.5382L8.99997 18L-6.48499e-05 8.99997L8.99997 0Z" fill="#858585"/>
+       </svg></div>`,`<div class='nav-btn next-slide'><svg width="33" height="18" viewBox="0 0 33 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <path d="M23.8155 0L22.3538 1.46177L28.8583 7.96639H0V10.0337H28.8583L22.3538 16.5382L23.8155 18L32.8155 8.99997L23.8155 0Z" fill="#858585"/>
+       </svg></div>`],
+    
+        responsive:{
+            0:{
+                items:2
+            },
+            600:{
+                items:3
+            },
+          
+        }
+            }
+        );
+      });
+     }
+  }
+  resizeListener()
+
+
 
 
 
@@ -204,3 +242,29 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+
+
+let list_stage = document.querySelectorAll('.stages .hidden_stages-item')
+let list_stage_content = document.querySelectorAll('.stages .stages-block_item')
+
+list_stage_content[0].classList.add('active')
+list_stage[0].classList.add('active')
+
+list_stage.forEach((stage, index) => {
+
+  stage.addEventListener('click', function(){
+    if(stage.classList.contains('active')){
+      console.log(stage);
+    } else{
+      document.querySelector('.stages .hidden_stages-item.active').classList.remove('active')
+      document.querySelector('.stages .stages-block_item.active').classList.remove('active')
+      stage.classList.add('active')
+      list_stage_content[index].classList.add('active')
+
+
+
+    }
+    
+  })
+})
