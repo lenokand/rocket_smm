@@ -47,11 +47,11 @@ module.exports = {
             template: './src/html/index.html',
             inject: 'body'
         }),
-        // new HtmlWebpackPlugin({
-        //     filename: 'cart.html',
-        //     template: './src/html/cart.html',
-        //     inject: 'body'
-        // })
+        new HtmlWebpackPlugin({
+            filename: 'personal.html',
+            template: './src/html/personal.html',
+            inject: 'body'
+        })
     ],
     module: {
         rules: [
